@@ -112,7 +112,7 @@ function App() {
             <div className="space-y-8">
               <div className="flex items-center space-x-4 mb-6">
                 <img 
-                  src="/public/IMG_20250407_112149.png" 
+                  src="/IMG_20250407_112149.png" 
                   alt="CS Exam Warriors Logo" 
                   className="w-16 h-16 rounded-full shadow-lg ring-4 ring-orange-500"
                 />
@@ -644,7 +644,7 @@ function App() {
           <div className="text-center">
             <div className="flex items-center justify-center space-x-4 mb-6">
               <img 
-                src="/public/IMG_20250407_112149.png" 
+                src="/IMG_20250407_112149.png" 
                 alt="CS Exam Warriors Logo" 
                 className="w-12 h-12 rounded-full"
               />
