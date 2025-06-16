@@ -11,6 +11,7 @@ function App() {
   });
 
   useEffect(() => {
+    console.log(process.env.PORT)
     const targetDate = new Date('December 22, 2025 00:00:00').getTime();
 
     const timer = setInterval(() => {
