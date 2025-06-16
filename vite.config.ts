@@ -7,9 +7,12 @@ export default defineConfig(({ mode }) => {
   // Set the third parameter to '' to load all env regardless of the `VITE_` prefix.
   const env = loadEnv(mode, process.cwd(), '');
   
-  // The PORT and HOST from .env file
-  const PORT = parseInt(env.PORT || '3000', 10);
-  const HOST = env.HOST || 'localhost';
+  // The PORT and HOST from .env file or environment variables
+  const PORT = parseInt(process.env.PORT || env.PORT || '3000', 10);
+  
+  // Always use '0.0.0.0' for production/preview to work with Render and other hosting services
+  // This makes the server listen on all available network interfaces
+  const HOST = mode === 'production' ? '0.0.0.0' : (env.HOST || 'localhost');
 
   console.log(`Server will start on http://${HOST}:${PORT}`);
   
@@ -21,8 +24,12 @@ export default defineConfig(({ mode }) => {
     server: {
       port: PORT,
       host: HOST,
-      // Setting this to true enables listening on all addresses including LAN and public addresses
       strictPort: true, // Throw error if port is already in use
+    },
+    preview: {
+      port: PORT,
+      host: '0.0.0.0', // Always use 0.0.0.0 for preview server (production builds)
+      strictPort: true,
     },
   };
 });
