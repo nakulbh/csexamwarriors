@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: cs-exam-warriors
+    env: node
+    buildCommand: pnpm install && pnpm build
+    startCommand: pnpm start
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: NODE_ENV
+        value: production
+    healthCheckPath: /
+    routes:
+      - type: host
+        host: csexamwarriors.onrender.com
+      - type: host
+        host: csexamwarriors.in
+    headers:
+      - path: /*
+        name: Host-Header
+        value: csexamwarriors.in

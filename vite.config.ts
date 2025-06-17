@@ -25,11 +25,25 @@ export default defineConfig(({ mode }) => {
       port: PORT,
       host: HOST,
       strictPort: true, // Throw error if port is already in use
+      allowedHosts: [
+        'localhost',
+        '127.0.0.1',
+        'csexamwarriors.onrender.com',
+        'csexamwarriors.in',
+        '.csexamwarriors.in' // Include all subdomains
+      ],
     },
     preview: {
       port: PORT,
       host: '0.0.0.0', // Always use 0.0.0.0 for preview server (production builds)
       strictPort: true,
+      allowedHosts: [
+        'localhost',
+        '127.0.0.1',
+        'csexamwarriors.onrender.com',
+        'csexamwarriors.in',
+        '.csexamwarriors.in' // Include all subdomains
+      ],
     },
   };
 });
