@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BookOpen, BarChart3, Users, Check, Phone, Mail, Instagram, Calendar, Target, Award, Clock, MessageCircle, GraduationCap, Trophy, Zap, Star, ChevronRight, Play, BookMarked, Brain, Lightbulb } from 'lucide-react';
+import { BookOpen, BarChart3, Users, Check, Phone, Mail, Instagram, Calendar, Target, Award, Clock, MessageCircle, GraduationCap, Trophy, Zap, ChevronRight, Play, BookMarked, Brain } from 'lucide-react';
 
 function App() {
   const [activeTab, setActiveTab] = useState('executive');
@@ -157,15 +157,25 @@ function App() {
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2">
+                <a 
+                  href="https://api.whatsapp.com/send/?phone=919220191218&text&type=phone_number&app_absent=0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2"
+                >
                   <GraduationCap size={24} />
                   <span>Enroll today</span>
                   <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
-                </button>
-                <button className="border-2 border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center space-x-2">
+                </a>
+                <a
+                  href="https://api.whatsapp.com/send/?phone=919220191218&text&type=phone_number&app_absent=0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border-2 border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center space-x-2"
+                >
                   <Play size={20} />
                   <span>Get a call back!</span>
-                </button>
+                </a>
               </div>
             </div>
             
