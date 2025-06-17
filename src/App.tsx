@@ -11,7 +11,7 @@ function App() {
   });
 
   useEffect(() => {
-    console.log(process.env.PORT)
+    // Don't use process.env in browser code
     const targetDate = new Date('December 22, 2025 00:00:00').getTime();
 
     const timer = setInterval(() => {
@@ -113,7 +113,7 @@ function App() {
             <div className="space-y-8">
               <div className="flex items-center space-x-4 mb-6">
                 <img 
-                  src="/IMG_20250407_112149.png" 
+                  src="./IMG_20250407_112149.png" 
                   alt="CS Exam Warriors Logo" 
                   className="w-16 h-16 rounded-full shadow-lg ring-4 ring-orange-500"
                 />
@@ -645,7 +645,7 @@ function App() {
           <div className="text-center">
             <div className="flex items-center justify-center space-x-4 mb-6">
               <img 
-                src="/IMG_20250407_112149.png" 
+                src="./IMG_20250407_112149.png" 
                 alt="CS Exam Warriors Logo" 
                 className="w-12 h-12 rounded-full"
               />
